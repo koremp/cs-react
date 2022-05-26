@@ -138,3 +138,12 @@ mocking은 일부 기능을 테스트할 때 의존 관계를 끊고 독립적�
 
 * <https://jestjs.io/docs/mock-functions>
 * <https://jestjs.io/docs/mock-function-api>
+
+## Sources
+
+* <https://ko.reactjs.org/docs/testing.html>
+* <https://jestjs.io/>
+* <https://developer.mozilla.org/en-US/docs/Web/API/console/assert>
+* <http://www.kyobobook.co.kr/product/detailViewKor.laf?barcode=9791195444953>
+* <http://www.kyobobook.co.kr/product/detailViewKor.laf?barcode=9788966261024>
+* <https://www.jamesshore.com/v2/books/aoad1/test_driven_development>
