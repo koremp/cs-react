@@ -1,3 +1,18 @@
-[submodule "week3-test/react-week3-assignment-1"]
-	path = week3-test/react-week3-assignment-1
-	url = https://github.com/koremp/react-week3-assignment-1
+[submodule "week1-jsx/react-week1-assignment-1"]
+	path = week1-jsx/react-week1-assignment-1
+	url = https://github.com/koremp/react-week1-assignment-1
+[submodule "week1-jsx/react-week1-assignment-2"]
+	path = week1-jsx/react-week1-assignment-1
+	url = https://github.com/koremp/react-week1-assignment-1
+[submodule "week2-react/react-week2-assignment-1"]
+	path = week2-react/react-week2-assignment-1
+	url = https://github.com/koremp/react-week2-assignment-1
+[submodule "week2-react/react-week2-assignment-2"]
+	path = week2-react/react-week2-assignment-2
+	url = https://github.com/koremp/react-week2-assignment-2
+[submodule "week4-redux/react-week4-assignment-1"]
+	path = week4-redux/react-week4-assignment-1
+	url = https://github.com/koremp/react-week4-assignment-1
+[submodule "week1-jsx/--force"]
+	path = week1-jsx/--force
+	url = https://github.com/koremp/react-week1-assignment-1
