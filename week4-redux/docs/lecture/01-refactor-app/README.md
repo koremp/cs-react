@@ -75,7 +75,7 @@ function changeTaskTitle(state, value) {
 }
 
 function addTask(state) {
-  const { newId } = state;
+  const { newId, taskTitle, tasks } = state;
 
   return {
       ...state,
@@ -86,6 +86,8 @@ function addTask(state) {
 }
 
 function deleteTask(state, value) {
+  const { tasks } = state;
+
   return {
     ...state,
     tasks: tasks.filter((task) => task.id !== id),
@@ -93,7 +95,7 @@ function deleteTask(state, value) {
 }
 
 export default function App() {
-  const [state, setState] = useState();
+  const [state, setState] = useState(initialState);
 
   const { taskTitle, tasks } = state;
 
@@ -163,7 +165,7 @@ export function addTask() {
 
 ```js
 //store.js
-import { createStore } from 'redux'
+import { configureStore } from 'redux';
 
 const initialState = {
   newId: 100,
@@ -172,14 +174,16 @@ const initialState = {
 };
 
 function reducer(state = initialState, action) {
-  if (action.type === "changeTaskTitle") {
+  if (action.type === 'changeTaskTitle') {
     return {
-      ...state
+      ...state,
       taskTitle: action.payload.taskTitle,
     };
   }
 
-  if (action.type === "addTask") {
+  if (action.type === 'addTask') {
+    const { newId, taskTitle, tasks } = state;
+
     return {
       ...state,
       newId: newId + 1,
@@ -188,17 +192,19 @@ function reducer(state = initialState, action) {
     };
   }
 
-  if (action.type === "deleteTask") {
+  if (action.type === 'deleteTask') {
+    const { tasks } = state;
+
     return {
       ...state,
-      tasks: tasks.filter((task) => task.id !== id),
-    }
+      tasks: tasks.filter((task) => task.id !== action.payload.id),
+    };
   }
 
   return state;
 }
 
-const store = createStore(reducer);
+const store = configureStore(reducer);
 
 export default store;
 ```
