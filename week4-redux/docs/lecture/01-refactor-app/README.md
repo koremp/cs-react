@@ -226,6 +226,8 @@ export default store;
 //App.jsx
 import React from 'react';
 
+import { useSelector, useDispatch } from 'react-redux'
+
 import Page from './Page';
 
 import {
@@ -234,13 +236,13 @@ import {
   deleteTask
 } from './actions'
 
-
-
 export default function App() {
   const { taskTitle, tasks } = useSelector((state) => ({
      taskTitle: state.taskTitle,
      tasks: state.tasks,
    })
+
+   const dispatch = useDispatch();
 
   function handleChangeTitle(event) {
     dispatch(updateTaskTitle(event.target.value))
@@ -273,9 +275,10 @@ export default function App() {
 프로젝트의 루트 디렉토리에 `./__mocks__`를 생성하고, 다음과 같이 `react-redux.js` 파일을 생성한다.
 
 ```js
-export function useSelector = jest.fn();
+//./__mocks__/react-redux.js
+export const useSelector = jest.fn();
 
-export function useDispatch = jest.fn();
+export const useDispatch = jest.fn();
 ```
 
 ### App.test.jsx
@@ -309,6 +312,4 @@ test('App', () => {
 
   expect(getByText(/aaaa/)).not.toBeNull();
 });
-
 ```
-
