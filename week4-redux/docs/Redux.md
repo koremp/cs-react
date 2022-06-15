@@ -51,6 +51,66 @@ npm i redux react-redux
 
 액션 객체에는 type, payload 속성으로 구성되는데 type은 어떤 액션인지 구별할 수 있는 문자열 값이며 payload 안에는 변경할 상태값(불변 객체)이 전달됩니다. Redux에서 상태값을 수정하는 유일한 방법은 액션 객체와 함께 dispatch 메서드를 호출하는 겁니다.
 
+#### 불변객체의 의미
+
+redux의 state에 배열인 `arr`이 있다고 봅시다. 또, 이 state를 변경하는 `someAction`이 있다고 봅시다.
+
+```js
+const state = {
+  arr: [],
+};
+
+function reducer(state=initialState, action) {
+  if(action.type === 'someAction') {
+    return state;
+  }
+
+  return state;
+}
+```
+
+이 state의 배열인 `arr`을 변경하는 `someAction`에서 `push()`, `append()` 등의 방식으로 변경해서는 안된다는 것이다.
+
+틀린 방법
+
+```js
+// 틀린 방법
+
+function reducer(state=initialState, action) {
+  if(action.type === 'wrongAction') {
+    const { arr } = state;
+    arr.push(123);
+    
+    return {
+      ...state,
+      arr,
+    };
+  }
+
+  return state;
+}
+```
+
+맞는 방법
+
+```js
+// 맞는 방법
+
+function reducer(state=initialState, action) {
+  if(action.type === 'someAction') {
+    const { arr } = state;
+    
+    return {
+      ...state,
+      arr: [...arr, 123],
+    };
+  }
+
+  return state;
+}
+```
+
+
 ### Reducer
 
 * <https://redux.js.org/tutorials/fundamentals/part-3-state-actions-reducers>
