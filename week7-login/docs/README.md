@@ -28,4 +28,17 @@ LocalStorage는 브라우저에 데이터를 저장하기 위해 사용됩니다
 
 ## 영상 강의
 
-123
+### 1. 로그인
+
+<https://github.com/reduxjs/redux-mock-store>
+
+axios, form, etc
+
+LoginPage에서 redux 관련 의존성이 있어서 테스트 코드랑 컴포넌트 코드에서 리덕스를 사용함.
+
+### 2. 리뷰 작성하기
+
+Authenthication -> Authorization
+httpie에서 `Authorization: Bearer ${AccessToken}`
+
+### 3. 로그인 로컬 스토리지
