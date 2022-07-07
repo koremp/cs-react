@@ -38,7 +38,10 @@ LoginPage에서 redux 관련 의존성이 있어서 테스트 코드랑 컴포�
 
 ### 2. 리뷰 작성하기
 
-Authenthication -> Authorization
+Authenthication(인증) -> Authorization(인가)
 httpie에서 `Authorization: Bearer ${AccessToken}`
+given2 <https://www.npmjs.com/package/given2>
 
 ### 3. 로그인 로컬 스토리지
+
+<https://www.zerocho.com/category/HTML&DOM/post/5918515b1ed39f00182d3048>
