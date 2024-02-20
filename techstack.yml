@@ -1,0 +1,44 @@
+repo_name: koremp/cs-react
+report_id: 3710a3f16aa2d1403dd8ecc51a29d3c8
+version: 0.1
+repo_type: Public
+timestamp: '2024-02-20T02:57:41+00:00'
+requested_by: koremp
+provider: github
+branch: main
+detected_tools_count: 3
+tools:
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/koremp/cs-react
+  detection_source: Repo Metadata
+- name: React
+  description: A JavaScript library for building user interfaces
+  website_url: https://reactjs.org/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Javascript UI Libraries
+  image_url: https://img.stackshare.io/service/1020/OYIaJ1KK.png
+  detection_source_url: https://github.com/koremp/cs-react/blob/main/week2-react/assignments/assign1/App.jsx
+  detection_source: week2-react/assignments/assign1/App.jsx
+  last_updated_by: 임도균
+  last_updated_on: 2022-05-23 07:01:48.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/koremp/cs-react
+  detection_source: Repo Metadata
