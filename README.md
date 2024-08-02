@@ -25,3 +25,9 @@
    1. <https://github.com/koremp/react-week7-assignment-1>
 8. week8-more
    1. <https://github.com/koremp/react-week8-assignment-1>
+  
+### 교육과정 수강 이후 개인 프로젝트
+
+Fancheer
+- <https://github.com/koremp/project-react-2-koremp>
+- <https://github.com/koremp/FanCheer>
